@@ -108,13 +108,15 @@ If your platform supports module command for choosing the programming
 environment dynamically, it often makes it easier to simplify the Makedef,
 and is recommended to take advantage of it.
 
+    $ module load intel impi
+
+
 ####step 3. Compile the source programs.
 
 Compile time varies a lot depending on your platform.
 Some platforms support parallel make which can reduce your wait time.
 In such case you can try parallel "make -j 8" , instead of "make" below.
 
-    $ module load intel impi
     $ cd ${MY_DIR}/nicam-dc-mini/src
     $ make
 
