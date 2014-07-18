@@ -38,8 +38,8 @@ $(PRJ37): prg_$(PRJ37).o $(MODS_TOOL) $(LIBDIR)/$(LIBNAME)
 
 prg_$(PRJ13).o	: prg_$(PRJ13).f90 $(LIBDIR)/$(LIBNAME)
 prg_$(PRJ26).o	: prg_$(PRJ26).f90 $(LIBDIR)/$(LIBNAME)
-prg_$(PRJ30).o	: prg_$(PRJ30).f90 $(LIBDIR)/$(LIBNAME)
-prg_$(PRJ37).o	: prg_$(PRJ37).f90 $(LIBDIR)/$(LIBNAME)
+prg_$(PRJ30).o	: prg_$(PRJ30).f90 $(LIBDIR)/$(LIBNAME) $(MODS_TOOL)
+prg_$(PRJ37).o	: prg_$(PRJ37).f90 $(LIBDIR)/$(LIBNAME) $(MODS_TOOL)
 
 mod_mnginfo_light.o	: mod_mnginfo_light.f90 $(LIBDIR)/$(LIBNAME)
 mod_option.o	: mod_option.f90

@@ -5,8 +5,8 @@
 ##### for computation
 
 FFLAGS_FAST  = -Kfast,parallel,auto,ocl,preex,array_private,noalias=s,mfunc=2 \
-               -Kparallel_iteration=8,instance=8,dynamic_iteration                   \
-               -Qi -Qt -X03 -Ncompdisp -Koptmsg=1 -Cpp                               \
+               -Kparallel_iteration=8,instance=8,dynamic_iteration \
+               -Qi -Qt -X03 -Ncompdisp -Koptmsg=1 -Cpp \
                -Kprefetch_cache_level=all,prefetch_iteration_L2=50 -Ksimd
 
 FFLAGS_DEBUG = -O0 \
@@ -33,9 +33,6 @@ CFLAGS = -Kfast,parallel,ocl,preex,array_private,region_extension,restp=all -Qt 
 
 LD     = $(FC)
 LFLAGS = $(FFLAGS)
-
-NETCDF_INCLUDE ?= -I/data/share005/cross-K/include
-NETCDF_LIBS    ?= -L/data/share005/cross-K/lib -lnetcdf -lhdf5_hl -lhdf5 -lsz -lz
 
 ##### for frontend
 INSTALL = install

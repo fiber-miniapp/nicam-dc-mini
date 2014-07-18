@@ -34,9 +34,6 @@ CFLAGS = -Kfast,parallel,ocl,preex,array_private,region_extension,restp=all -Qt 
 LD     = $(FC)
 LFLAGS = $(FFLAGS)
 
-NETCDF_INCLUDE ?= -I/data/yashiro/tool/cross-K/include
-NETCDF_LIBS    ?= -L/data/yashiro/tool/cross-K/lib -lnetcdf -lhdf5_hl -lhdf5 -lsz -lz
-
 ##### for frontend
 INSTALL = install
 AR      = ar

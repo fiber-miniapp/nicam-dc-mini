@@ -36,7 +36,7 @@ makedir:
 
 makemain: $(PRJS)
 	$(INSTALL) $(PRJS) $(BINDIR)/
-	ln -svf    $(BINDIR)/$(PRJ1) $(BINDIR)/$(BINNAME)
+	ln -sf    $(BINDIR)/$(PRJ1) $(BINDIR)/$(BINNAME)
 	@echo; echo "##### $(BINNAME) is Installed Successfully #####"; echo
 
 maketool: $(LIBDIR)/$(LIBNAME)

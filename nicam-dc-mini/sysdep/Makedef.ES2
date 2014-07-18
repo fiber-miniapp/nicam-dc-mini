@@ -32,15 +32,8 @@ MODDIROPT ?= -to
 CC     = sxmpic++
 CFLAGS = -C vsafe
 
-ifneq ($(USE_NETCDF3),)
-      CFLAGS += -DNETCDF3
-endif
-
 LD     = $(FC)
 LFLAGS = $(FFLAGS)
-
-NETCDF_INCLUDE ?= -I/SX/usr/include
-NETCDF_LIBS    ?= -L/SX/usr/lib0 -lnetcdf
 
 ##### for frontend
 INSTALL = install

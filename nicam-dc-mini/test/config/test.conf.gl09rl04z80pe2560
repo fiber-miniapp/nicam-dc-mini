@@ -1,0 +1,9 @@
+glevel = 9
+rlevel = 4
+nmpi   = 2560
+zlayer = 80
+vgrid  = vgrid80_24000-300m.dat
+LSMAX  = 0
+DTL    = 75
+DIFCF  = '3.150D12'
+NHIST  = 0

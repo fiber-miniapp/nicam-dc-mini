@@ -1,0 +1,19 @@
+#
+# ------ FOR Linux 64bit generic skelton
+#
+
+FC     = mpif90
+FFLAGS = -O3  -cpp -U_FIPP_ -U_FAPP_
+
+
+CC     = mpicc
+CFLAGS = -O3  -cpp -U_FIPP_ -U_FAPP_
+
+LD     = $(FC)
+LFLAGS = $(FFLAGS)
+
+INSTALL = install
+AR      = ar
+ARFLAGS = r
+RANLIB  = ranlib
+JOBSUB  = sh

@@ -7,10 +7,9 @@ ZL=${4}
 VGRID=${5}
 TOPDIR=${6}
 BINNAME=${7}
-RUNCONF=${8}
 
 # System specific
-MPIEXEC="mpirun -np ${NMPI}"
+MPIEXEC="openmpirun -np ${NMPI}"
 
 GL=`printf %02d ${GLEV}`
 RL=`printf %02d ${RLEV}`
@@ -38,20 +37,20 @@ cat << EOF1 > run.sh
 #! /bin/bash -x
 ################################################################################
 #
-# ------ FOR Linux64 & intel C&fortran & mpich2 -----
+# ------ FOR MacOSX & gfortran4.6 & OpenMPI1.6 -----
 #
 ################################################################################
 export FORT_FMT_RECL=400
+export GFORTRAN_UNBUFFERED_ALL=Y
 
-
-ln -sv ${TOPDIR}/bin/${BINNAME} .
-ln -sv ${TOPDIR}/data/mnginfo/${MNGINFO} .
-ln -sv ${TOPDIR}/data/grid/vgrid/${VGRID} .
+ln -s ${TOPDIR}/bin/${BINNAME} .
+ln -s ${TOPDIR}/data/mnginfo/${MNGINFO} .
+ln -s ${TOPDIR}/data/grid/vgrid/${VGRID} .
 EOF1
 
 for f in $( ls ${TOPDIR}/data/grid/boundary/${dir2d} )
 do
-   echo "ln -sv ${TOPDIR}/data/grid/boundary/${dir2d}/${f} ." >> run.sh
+   echo "ln -s ${TOPDIR}/data/grid/boundary/${dir2d}/${f} ." >> run.sh
 done
 
 cat << EOF2 >> run.sh
@@ -62,25 +61,25 @@ ${MPIEXEC} ./${BINNAME} || exit
 ################################################################################
 EOF2
 
-
+exit
 cat << EOFICO2LL1 > ico2ll.sh
 #! /bin/bash -x
 ################################################################################
 #
-# ------ FOR Linux64 & intel C&fortran & mpich2 -----
+# ------ FOR MacOSX & gfortran4.6 & OpenMPI1.6 -----
 #
 ################################################################################
 export FORT_FMT_RECL=400
+export GFORTRAN_UNBUFFERED_ALL=Y
 
-
-ln -sv ${TOPDIR}/bin/fio_ico2ll_mpi .
-ln -sv ${TOPDIR}/data/mnginfo/${MNGINFO} .
-ln -sv ${TOPDIR}/data/zaxis .
+ln -s ${TOPDIR}/bin/fio_ico2ll_mpi .
+ln -s ${TOPDIR}/data/mnginfo/${MNGINFO} .
+ln -s ${TOPDIR}/data/zaxis .
 EOFICO2LL1
 
 for f in $( ls ${TOPDIR}/data/grid/llmap/gl${GL}/rl${RL}/ )
 do
-   echo "ln -sv ${TOPDIR}/data/grid/llmap/gl${GL}/rl${RL}/${f} ." >> ico2ll.sh
+   echo "ln -s ${TOPDIR}/data/grid/llmap/gl${GL}/rl${RL}/${f} ." >> ico2ll.sh
 done
 
 cat << EOFICO2LL2 >> ico2ll.sh

@@ -28,10 +28,6 @@ CFLAGS = -O3 -m64
 LD     = $(FC)
 LFLAGS = $(FFLAGS)
 
-###### NetCDF library
-NETCDF_INCLUDE ?= -I/opt/local/include
-NETCDF_LIBS    ?= -L/opt/local/lib -lnetcdff -lnetcdf
-
 ##### for frontend
 INSTALL = install
 AR      = ar

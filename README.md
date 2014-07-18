@@ -108,15 +108,13 @@ If your platform supports module command for choosing the programming
 environment dynamically, it often makes it easier to simplify the Makedef,
 and is recommended to take advantage of it.
 
-    $ module load intel impi
-
-
 ####step 3. Compile the source programs.
 
 Compile time varies a lot depending on your platform.
 Some platforms support parallel make which can reduce your wait time.
 In such case you can try parallel "make -j 8" , instead of "make" below.
 
+    $ module load intel impi
     $ cd ${MY_DIR}/nicam-dc-mini/src
     $ make
 
@@ -212,7 +210,7 @@ The msg.* file should contain the summary of prognostic variables.
 Check the values of msg.pe00000 and see if they match the values below
 up to reasonable digits.
 
-    $ sed -n "/prognostic variables/,+5p" msg.pe00000a | tail -6
+    $ sed -n "/prognostic variables/,+5p" msg.pe00000 | tail -6
     ====== data range check : prognostic variables ======
     --- pre             : max= 9.85041585433862347E+04, min= 2.74551688200134413E+03
     --- tem             : max= 3.08688864513657961E+02, min= 2.09192046390859161E+02
@@ -240,7 +238,7 @@ LSMAX  = 0 (=auto:792)→ LSMAX  = 396 or 264
 
 
 
-Running the weak scalability tests
+Running the scalability tests
 -----------------------------
 
 In NICAM-DC, total problem size is determined by grid division level (glevel)
@@ -251,23 +249,31 @@ Their relationship is explained later in this section.
 
 To run the scalability tests, it is necessary to install the additional
 binary data files and their configuration files.
-As of this version, the files for the following job size have been made
-available for the tests:  
+As of this version, the weak scalability test data files for the following jobs
+have been made available:  
 10, 40, 160, 640, 2560 MPI processes.  
 These data files and configuration files are archived as a tar ball at:  
-http://fiber-miniapp.github.io/nicam-dc-mini.extradata.tar.gz
-(this address will be finalized)
 
-Download this file and install it on the data directory as follows:
+http://hpci-aplfs.aics.riken.jp/fiber/nicam-dc-mini/data-weak2560.tar.gz
+
+Download this file and install it on the top directory as follows:
 
     $ cd ${MY_DIR}/nicam-dc-mini
-    $ # place the downloaded tar ball here, and 
-    $ tar -zxf ./nicam-dc-mini.extradata.tar.gz
+    $ # copy the downloaded tar ball to here
+    $ tar -zxf data-weak2560.tar.gz
 
-The problem configuration must be set by modifying the values of
-"test.conf" file located in test/ directory.
-The easiest way to do that is to copy one of the archived files
-under test/config sub directory to test.conf, and repeat step 4.
+For each of the scalability job, the problem configuration must be set,
+and the test directory must be created.
+The problem configuration is set through the values of "test.conf" file
+located in test/ directory.
+Repeating the step 4 in the above installation chapter will create
+the corresponding test directory.
+
+The configuration files for 10, 40, 160, 640, 2560 MPI processes are
+included in the "data-weak2560.tar.gz" file, and they should be
+found under test/config sub directory.
+
+To prepare a 160 MPI process job, for example, it can be done as follows.
 
     $ cd ${MY_DIR}/nicam-dc-mini/test
     $ ls config
@@ -276,13 +282,13 @@ under test/config sub directory to test.conf, and repeat step 4.
     test.conf.gl07rl02z80pe160
     test.conf.gl08rl03z80pe640
     test.conf.gl09rl04z80pe2560
-    $ # choose one of the configuration file and copy it
-    $ cp config/test.conf.gl05rl00z80pe10 test.conf
-    $ cd ${MY_DIR}/nicam-dc-mini/test/case/jablonowski # The same as step 4.
+    $ cp config/test.conf.gl07rl02z80pe160 test.conf
+    $ # Take the same procedure as step 4 in the installation chapter
+    $ cd ${MY_DIR}/nicam-dc-mini/test/case/jablonowski
     $ make          # The same as step 4.
     $ make jobshell # The same as step 4.
 
-A directory named gl05rl00z80pe10 containing the test configuration
+A directory named gl07rl02z80pe160 containing the test configuration
 and the job script should be created.
 The name of the test directory is decided according to the value of
 glevel, rlevel, zlayer, nmpi as follows:
