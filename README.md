@@ -27,7 +27,7 @@ Installation
 As a quick start, the installation example on K computer is shown first.
 
     $ MY_DIR=$PWD
-    $ tar -zxf nicam-dc-mini.ver1.tar.gz
+    $ tar -zxf nicam-dc-mini-1.0.tar.gz
     $ export NICAM_SYS=K
     $ cd $MY_DIR/nicam-dc-mini/src
     $ make
@@ -52,14 +52,16 @@ The following software must be available on that platform.
 
 ####step 1. Obtain the distribution package.
 
-Obtain the nicam-dc-mini package file "nicam-dc-mini.ver1.tar.gz" from
-the repository.  
-https://github.com/fiber-miniapp/nicam-dc-mini  
+Obtain the nicam-dc-mini package file
+"nicam-dc-mini-1.0.tar.gz"
+from the repository.  
+http://fiber-miniapp.github.io/
+
 Extract its contents using tar command.
 This readme file (readme.md) is included in the package.
 
     $ MY_DIR=$PWD
-    $ tar -zxf nicam-dc-mini.ver1.tar.gz
+    $ tar -zxf nicam-dc-mini-1.0.tar.gz
     $ cd ${MY_DIR}/nicam-dc-mini
     $ ls -CF
     LICENSE  NICAM-DC_LOGO.png  README.md
