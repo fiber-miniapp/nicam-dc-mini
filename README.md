@@ -385,14 +385,11 @@ Brief explanation of NICAM and NICAM-DC
 NICAM ( Nonhydrostatic ICosahedral Atmospheric Model ) has been continuously
 developed for the high-resolution climate study by explicit cloud expression.
 The first global simulation using NICAM with 3.5km of horisontal mesh was
-performed in 2004.
+performed in 2004.  
 The development of NICAM with full physics has been co-developed mainly by
 Japan Agency for Marine-Earth Science and Technology (JAMSTEC),
 Atmosphere and Ocean Research Institute (AORI) at The University of Tokyo,
 and RIKEN Advanced Institute for Computational Science (AICS).
-A reference paper for NICAM is Satoh et al. (2008). See also [NICAM.jp Website][link].
-
-[link]:http://NICAM.jp
 
 NICAM is composed of two major procedure blocks each having its own computational
 characteristics.
@@ -415,11 +412,14 @@ as a separate standalone program out of NICAM.
 The License term of nicam-dc-mini is provided in the BSD 2-Clause License.
 Please refer to "LICENSE" file included in the nicam-dc-mini package.
 
-Contact for inquiry regarding NICAM-DC should be made to:
+Although general contact regarding nicam-dc-mini should be made to
+miniapp@riken.jp as shown in the top of this README file,
+further inquiry regarding NICAM and NICAM-DC can be made through the
+NICAM mailing lists shown in the [NICAM.jp Website][link] .
+[link]:http://NICAM.jp
 
-_ RIKEN Advanced Institute for Computational Science, Computational Climate System Research Team _
-
-_ email: <aics-climate@riken.jp> _
+NICAM.jp Website also covers the general description of NICAM, the list of
+reference papers, the gallery, the development activity records, etc.
 
 
 
