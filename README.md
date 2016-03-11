@@ -416,7 +416,7 @@ General contact regarding nicam-dc-mini should be made to
 miniapp@riken.jp as shown in the top of this README file.  
 
 See [NICAM-DC website][link] for further information including numerical techniques and related papers
-for NICAM-DC.
+regarding NICAM-DC.
 [link]:http://scale.aics.riken.jp/nicamdc/
 
 
