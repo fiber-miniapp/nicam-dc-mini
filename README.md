@@ -415,8 +415,8 @@ Please refer to "LICENSE" file included in the nicam-dc-mini package.
 General contact regarding nicam-dc-mini should be made to
 miniapp@riken.jp as shown in the top of this README file.  
 
-See NICAM-DC website for further information including numerical techniques and related papers.
-[NICAM-DC website][link] 
+See [NICAM-DC website][link] for further information including numerical techniques and related papers
+for NICAM-DC.
 [link]:http://scale.aics.riken.jp/nicamdc/
 
 
