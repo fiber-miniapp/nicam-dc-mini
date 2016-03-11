@@ -412,14 +412,12 @@ as a separate standalone program out of NICAM.
 The License term of nicam-dc-mini is provided in the BSD 2-Clause License.
 Please refer to "LICENSE" file included in the nicam-dc-mini package.
 
-Although general contact regarding nicam-dc-mini should be made to
-miniapp@riken.jp as shown in the top of this README file,
-further inquiry regarding NICAM and NICAM-DC can be made through the
-NICAM mailing lists shown in the [NICAM.jp Website][link] .
-[link]:http://NICAM.jp
+General contact regarding nicam-dc-mini should be made to
+miniapp@riken.jp as shown in the top of this README file.  
 
-NICAM.jp Website also covers the general description of NICAM, the list of
-reference papers, the gallery, the development activity records, etc.
+See NICAM-DC website for further information including numerical techniques and related papers.
+[NICAM-DC website][link] 
+[link]:http://scale.aics.riken.jp/nicamdc/
 
 
 
