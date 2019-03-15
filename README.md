@@ -1,8 +1,8 @@
 nicam-dc-mini
 =============
 
-* version: 1.0.0 (based on NICAM-DC_20130823.tgz version)
-* date: 2014/07/07
+* version: 1.0.1 (based on NICAM-DC_20130823.tgz version)
+* date: 2019/03/15
 * contact: miniapp@riken.jp
 
 
@@ -256,7 +256,7 @@ have been made available:
 10, 40, 160, 640, 2560 MPI processes.  
 These data files and configuration files are archived as a tar ball at:  
 
-http://hpci-aplfs.aics.riken.jp/fiber/nicam-dc-mini/data-weak2560.tar.gz
+https://hpci-aplfs.r-ccs.riken.jp/fiber/nicam-dc-mini/data-weak2560.tar.gz
 
 Download this file and install it on the top directory as follows:
 
@@ -417,7 +417,7 @@ miniapp@riken.jp as shown in the top of this README file.
 
 See [NICAM-DC website][link] for further information including numerical techniques and related papers
 regarding NICAM-DC.
-[link]:http://scale.aics.riken.jp/nicamdc/
+[link]:http://r-ccs-climate.riken.jp/nicam-dc/index.html
 
 
 
