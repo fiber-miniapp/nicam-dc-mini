@@ -2,7 +2,7 @@ nicam-dc-mini
 =============
 
 * version: 1.0.1 (based on NICAM-DC_20130823.tgz version)
-* date: 2019/03/15
+* update: 2019/03/15 (Web address of the archived data set changed)
 * contact: miniapp@riken.jp
 
 
