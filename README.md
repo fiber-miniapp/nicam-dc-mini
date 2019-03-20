@@ -389,7 +389,7 @@ performed in 2004.
 The development of NICAM with full physics has been co-developed mainly by
 Japan Agency for Marine-Earth Science and Technology (JAMSTEC),
 Atmosphere and Ocean Research Institute (AORI) at The University of Tokyo,
-and RIKEN Advanced Institute for Computational Science (AICS).
+and RIKEN Center for Computational Science (R-CCS).
 
 NICAM is composed of two major procedure blocks each having its own computational
 characteristics.
